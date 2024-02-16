@@ -3,10 +3,7 @@ class Solution:
         profit =0
         buy =prices[0]
 
-        while (price in prices):
-            buy =min(pri)
-                profit = max(profit, prices[r]-prices[l])
-            else :
-                r=l
-
-        return profit      
+        for price in prices:
+            buy =min(buy, price)
+            profit = max(profit, price-buy)
+        return profit                 
