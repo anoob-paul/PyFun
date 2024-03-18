@@ -2,10 +2,10 @@ import pandas_datareader as pdr
 import datetime as dt
 
 
-start_date = dt.datetime(2018,1,1)
-end_date =dt.datetime.now()
 
-data =pdr.get_nasdaq_symbols()
+# data =pdr.get_data_yahoo()
+data = pdr.DataReader('BTC-USD', 'yahoo', start='2019-9-10', end='2024-3-9')
+
 print(data)
 
 # pdr.get_data_fred('GS10')
